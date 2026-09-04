@@ -1,0 +1,16 @@
+# 自定义 YOLO 检测模型配置模板
+# 将 model_path 改为你的 .pt 权重路径（建议使用服务器可访问的绝对路径）
+# 也可在标注工具中同时选择本 YAML 与 .pt 文件，由服务器保存权重
+
+type: yolov8
+name: my_custom_hbb
+display_name: 我的 HBB 检测模型
+model_path: best.pt
+device: cpu
+conf_threshold: 0.25
+iou_threshold: 0.45
+
+# 可选：自定义类别名称（与训练时一致）
+# classes:
+#   - class_a
+#   - class_b

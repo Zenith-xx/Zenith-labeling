@@ -1,0 +1,107 @@
+.annotation-page {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-base);
+  overflow: hidden;
+}
+
+@supports (height: 100dvh) {
+  :root:not(.is-embedded) .annotation-page {
+    height: 100dvh;
+    max-height: 100dvh;
+  }
+}
+
+:root.is-embedded .annotation-page {
+  height: 100%;
+  max-height: 100%;
+}
+
+.annotation-body {
+  flex: 1 1 0;
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.right-panel {
+  --right-panel-width: clamp(220px, 22vw, 300px);
+  width: var(--right-panel-width);
+  flex: 0 0 var(--right-panel-width);
+  height: 100%;
+  max-height: 100%;
+  background: var(--color-bg-base);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  overflow: hidden;
+  min-height: 0;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.sidebar-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.right-panel > .sidebar-card.label-manager {
+  flex: 1.1 1 0;
+  height: auto;
+  min-height: 0;
+}
+
+.right-panel > .sidebar-card.object-panel {
+  flex: 2 1 0;
+  height: auto;
+  min-height: 0;
+}
+
+.right-panel > .sidebar-card.file-panel {
+  flex: 1.5 1 0;
+  height: auto;
+  min-height: 0;
+}
+
+.sidebar-card .panel-header {
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media (max-height: 720px) {
+  .right-panel {
+    gap: 6px;
+    padding: 6px;
+  }
+}
+
+@media (max-height: 560px) {
+  .right-panel {
+    gap: 4px;
+    padding: 4px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .right-panel {
+    --right-panel-width: clamp(200px, 24vw, 260px);
+  }
+}
+
+@media (max-width: 960px) {
+  .right-panel {
+    --right-panel-width: clamp(180px, 28vw, 220px);
+  }
+}

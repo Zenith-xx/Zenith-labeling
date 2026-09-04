@@ -1,0 +1,96 @@
+.ai-task-history {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ai-task-history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ai-task-sync-error {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.ai-task-history-item {
+  padding-inline: 0 !important;
+  border-block-end: 1px solid var(--color-border);
+}
+
+.ai-task-history-item:last-child {
+  border-block-end: none;
+}
+
+.ai-task-history-item-body {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ai-task-history-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.4;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.ai-task-history-model {
+  font-size: 13px;
+  line-height: 1.4;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.ai-task-history-desc {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+  word-break: break-word;
+  white-space: normal;
+}
+
+.ai-task-history-sep {
+  margin: 0 2px;
+}
+
+.ai-task-history-error {
+  display: inline;
+  font-size: 12px;
+  word-break: break-word;
+}
+
+.ai-task-history-running-hint {
+  display: block;
+  font-size: 12px;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.ai-task-history-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+  margin-top: 2px;
+}
+
+.ai-task-history-continue {
+  font-size: 12px;
+}
+
+.ai-task-history-actions .ant-btn-link {
+  padding-inline: 4px;
+  height: auto;
+  line-height: 1.4;
+}

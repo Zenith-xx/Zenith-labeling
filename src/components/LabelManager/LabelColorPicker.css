@@ -1,0 +1,355 @@
+.label-color-swatch-btn {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid color-mix(in srgb, var(--color-text) 25%, transparent);
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, #fff 20%, transparent);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.label-color-swatch-btn:hover {
+  transform: scale(1.06);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, #fff 20%, transparent),
+    0 0 0 2px color-mix(in srgb, var(--color-primary) 35%, transparent);
+}
+
+.label-color-dialog .ant-modal-content {
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.label-color-dialog .ant-modal-header {
+  background: var(--color-bg-panel);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 0;
+  padding: 12px 18px;
+}
+
+.label-color-dialog .ant-modal-title {
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+.label-color-dialog .ant-modal-body {
+  padding: 16px 18px 18px;
+}
+
+.label-color-dialog-body {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.label-color-dialog-left {
+  width: 228px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label-color-dialog-right {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 100%;
+}
+
+.label-color-section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
+.label-color-section-title--custom {
+  margin-top: 6px;
+}
+
+.label-color-basic-grid,
+.label-color-custom-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 5px;
+}
+
+.label-color-basic-swatch,
+.label-color-custom-swatch {
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 1px solid color-mix(in srgb, var(--color-text) 18%, transparent);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.label-color-basic-swatch:hover,
+.label-color-custom-swatch:hover {
+  transform: scale(1.08);
+  z-index: 1;
+}
+
+.label-color-basic-swatch.is-active,
+.label-color-custom-swatch.is-active {
+  box-shadow: 0 0 0 2px var(--color-primary-strong);
+}
+
+.label-color-custom-swatch.is-empty {
+  background: var(--color-bg-base);
+  cursor: pointer;
+}
+
+.label-color-custom-swatch.is-empty:hover {
+  border-color: var(--color-primary);
+}
+
+.label-color-screen-btn,
+.label-color-add-custom-btn {
+  margin-top: 0;
+}
+
+.label-color-add-custom-btn {
+  margin-top: auto;
+}
+
+.label-color-spectrum-row {
+  display: flex;
+  gap: 12px;
+  flex: 1 1 auto;
+  min-height: 168px;
+}
+
+.label-color-sv-area {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  cursor: crosshair;
+  touch-action: none;
+  background-image:
+    linear-gradient(to top, #000, transparent),
+    linear-gradient(to right, #fff, transparent);
+}
+
+.label-color-sv-marker {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  margin-top: -6px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+.label-color-hue-track {
+  position: relative;
+  width: 20px;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  cursor: ns-resize;
+  touch-action: none;
+  background: linear-gradient(
+    to bottom,
+    #ff0000 0%,
+    #ffff00 17%,
+    #00ff00 33%,
+    #00ffff 50%,
+    #0000ff 67%,
+    #ff00ff 83%,
+    #ff0000 100%
+  );
+}
+
+.label-color-hue-marker {
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  height: 4px;
+  margin-top: -2px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+/* ============================================================
+ * 数值输入区布局 — 自行调整说明
+ * 文件：LabelColorPicker.css（本段约 182 行起）
+ *
+ * 结构示意：
+ *   [预览色块] --gap--> [ Hue/Sat/Val/Red/Green/Blue 两列网格 ]
+ *                      [ HTML 输入行 ]
+ *
+ * 常见问题对照：
+ *   - 数值区太靠右 → 减小 .label-color-values-row 的 gap，或缩小 .label-color-preview 的 width
+ *   - 左列箭头压住右列标签 → 增大 .label-color-value-grid 的 column-gap
+ *   - 标签与输入框没对齐 → 调 .label-color-value-item 的 grid-template-columns 第一项（标签宽）
+ *   - 输入框与箭头重叠 → 保证 标签宽 + 数值区宽(62px) ≤ 每列总宽；数值区宽 = 输入宽 + gap + 箭头宽
+ *   - 行与行间距 → 调 .label-color-value-grid 的 row-gap
+ *   - 上下没居中 → 调 .label-color-value-label / .label-color-number-input 的 height（保持一致）
+ * ============================================================ */
+
+.label-color-values-row {
+  display: flex;
+  gap: 8px; /* 【左右间距】预览色块 ↔ 数值区，越小数值区越靠左 */
+  align-items: stretch;
+  flex-shrink: 0;
+}
+
+.label-color-preview {
+  width: 48px; /* 【预览宽度】越小，右侧数值区可用空间越大、整体越靠左 */
+  flex-shrink: 0;
+  align-self: stretch;
+  min-height: 132px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+.label-color-values {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px; /* 【网格与 HTML 行间距】 */
+  min-height: 132px;
+}
+
+.label-color-value-grid {
+  display: grid;
+  grid-template-columns: max-content max-content; /* 两列，每列按内容宽度；一般不用改 */
+  justify-content: start; /* start=靠左，center=居中 */
+  column-gap: 13px; /* 【列间距】Hue列与Sat列之间，太小会箭头压住右列标签 */
+  row-gap: 10px; /* 【行间距】Hue/Val/Green 各行之间 */
+  flex: 1;
+  align-items: center; /* 同行两列垂直居中 */
+}
+
+.label-color-value-item {
+  display: grid;
+  grid-template-columns: 48px 62px; /* 【每行两格】48px=标签列宽，62px=输入框+箭头总宽（须与下方 .label-color-number 的 width 一致） */
+  align-items: center;
+  column-gap: 4px; /* 【标签与输入框间距】 */
+  margin: 0;
+  width: max-content;
+}
+
+.label-color-value-label {
+  display: flex;
+  align-items: center;
+  height: 26px; /* 【标签行高】与输入框 height 保持一致可上下对齐 */
+  font-size: 12px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.label-color-number {
+  display: flex;
+  align-items: center;
+  gap: 1px; /* 【输入框与箭头间距】 */
+  width: 62px; /* 【数值区总宽】= 输入框宽 + gap + 箭头宽，须与 .label-color-value-item 第二列一致 */
+  flex-shrink: 0;
+}
+
+.label-color-number-input {
+  width: 50px; /* 【输入框宽度】 */
+  height: 26px; /* 【输入框高度】与 .label-color-value-label 的 height 一致 */
+  padding: 0 6px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-bg-base);
+  color: var(--color-text);
+  font-size: 12px;
+  line-height: 24px;
+  box-sizing: border-box;
+}
+
+.label-color-number-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.label-color-spinner {
+  display: flex;
+  flex-direction: column;
+  width: 12px; /* 【箭头列宽度】 */
+  height: 26px; /* 与输入框同高 */
+  flex-shrink: 0;
+}
+
+.label-color-spinner-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.label-color-spinner-btn:hover {
+  color: var(--color-text);
+}
+
+.label-color-hex-row {
+  display: grid;
+  grid-template-columns: 48px 1fr; /* 【HTML行】48px 须与上方标签列宽一致，HTML 输入框占剩余宽度 */
+  align-items: center;
+  column-gap: 4px;
+}
+
+.label-color-hex-input {
+  flex: 1;
+  min-width: 0;
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-bg-base);
+  color: var(--color-text);
+  font-size: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.label-color-hex-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.label-color-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+@media (max-width: 640px) {
+  .label-color-dialog-body {
+    flex-direction: column;
+  }
+
+  .label-color-dialog-left {
+    width: 100%;
+  }
+
+  .label-color-dialog-right {
+    min-width: 0;
+  }
+}

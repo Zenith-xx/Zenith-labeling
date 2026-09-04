@@ -1,0 +1,35 @@
+.ai-task-progress-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ai-task-progress-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ai-task-progress-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ai-task-progress-count {
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+
+.ai-task-progress-stats {
+  width: 100%;
+}
+
+.ai-task-progress-current {
+  display: block;
+  max-width: 100%;
+}
+
+.ai-task-progress-error {
+  display: block;
+}

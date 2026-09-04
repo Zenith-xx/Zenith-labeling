@@ -1,0 +1,35 @@
+.model-card {
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.model-card.selected {
+  border-color: var(--color-primary, #1677ff);
+}
+
+.model-card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.model-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.model-card-line {
+  margin-bottom: 0 !important;
+  font-size: 12px;
+}
+
+.model-card-error {
+  margin-bottom: 0 !important;
+  font-size: 12px;
+}
+
+.model-card-actions {
+  margin-top: 4px;
+}

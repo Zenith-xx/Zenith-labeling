@@ -1,0 +1,139 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: 48px;
+  min-height: 40px;
+  flex-shrink: 0;
+  padding: 0 12px;
+  background: var(--color-bg-panel);
+  border-bottom: 1px solid var(--color-border);
+  user-select: none;
+  min-width: 0;
+  /* 必须 visible：上传/导出/主题下拉挂在顶栏下方，hidden 会裁切且导致菜单点不着 */
+  overflow: visible;
+  position: relative;
+  z-index: 20;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: visible;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  padding-left: 12px;
+  border-left: 1px solid var(--color-border);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 21;
+}
+
+.topbar-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.topbar-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.topbar-btn {
+  color: var(--color-text-muted) !important;
+  font-size: 13px;
+  border-radius: 6px;
+  padding: 4px 12px;
+  height: 32px;
+}
+
+.topbar-btn-dropdown {
+  display: inline-flex !important;
+  align-items: center;
+}
+
+.topbar-btn-caret {
+  margin-left: 4px;
+  font-size: 10px;
+  stroke-width: 1;
+  opacity: 0.75;
+  transition: transform 0.15s ease;
+}
+
+.yolo-format-dropdown.is-open .topbar-btn-caret {
+  transform: rotate(180deg);
+}
+
+.topbar-btn:hover:not(:disabled) {
+  color: var(--color-text) !important;
+  background: var(--color-bg-hover) !important;
+}
+
+.topbar-btn:disabled {
+  opacity: 0.4 !important;
+  cursor: not-allowed !important;
+}
+
+/* 避免点击后获焦，Shift 等键出现黑框并干扰悬停菜单 */
+.topbar-btn:focus,
+.topbar-btn:focus-visible,
+.topbar-btn:focus-within {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.topbar-btn.ant-btn:focus,
+.topbar-btn.ant-btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+@media (max-height: 640px) {
+  .topbar {
+    height: 40px;
+    padding: 0 8px;
+  }
+
+  .topbar-btn {
+    height: 28px;
+    padding: 2px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .topbar-title {
+    max-width: 96px;
+  }
+
+  .topbar-btn {
+    padding: 2px 8px;
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar-title {
+    display: none;
+  }
+
+  .topbar-actions {
+    margin-left: 4px;
+    padding-left: 8px;
+  }
+}

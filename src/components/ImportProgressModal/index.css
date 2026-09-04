@@ -1,0 +1,91 @@
+.import-progress-modal .ant-modal-content {
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.import-progress-modal .ant-modal-header {
+  background: var(--color-bg-panel);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.import-progress-modal .ant-modal-title {
+  color: var(--color-text);
+}
+
+.import-progress-modal .ant-modal-close {
+  color: var(--color-text-muted);
+}
+
+.import-progress-modal .ant-modal-close:hover {
+  color: var(--color-text);
+}
+
+.import-progress-modal .ant-modal-body {
+  background: var(--color-bg-panel);
+}
+
+.import-progress-modal .ant-modal-footer {
+  background: var(--color-bg-panel);
+  border-top: 1px solid var(--color-border);
+}
+
+.import-progress-modal .ant-progress-text {
+  color: var(--color-text) !important;
+}
+
+.import-progress-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 8px 0;
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.import-progress-summary p {
+  margin: 0;
+}
+
+.import-progress-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.import-progress-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.import-progress-label {
+  color: var(--color-text-muted);
+}
+
+.import-progress-value {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+
+.import-progress-detail {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.import-progress-message {
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+.import-progress-success {
+  color: var(--color-success);
+}
+
+.import-progress-error {
+  color: var(--color-danger);
+}

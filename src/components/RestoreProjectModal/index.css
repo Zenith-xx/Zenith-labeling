@@ -1,0 +1,47 @@
+.restore-project-modal .restore-project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.restore-project-lead {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.restore-project-meta {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--color-text) 6%, transparent);
+}
+
+.restore-project-meta-row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 8px;
+  align-items: start;
+}
+
+.restore-project-meta-row + .restore-project-meta-row {
+  margin-top: 8px;
+}
+
+.restore-project-meta-row dt {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.restore-project-meta-row dd {
+  margin: 0;
+  word-break: break-all;
+  color: var(--color-text);
+}
+
+.restore-project-note {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}

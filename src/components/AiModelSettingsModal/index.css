@@ -1,0 +1,74 @@
+.ai-model-settings-modal .ant-modal-content {
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.ai-model-settings-modal .ant-modal-header {
+  background: var(--color-bg-panel);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ai-model-settings-modal .ant-modal-title {
+  color: var(--color-text);
+}
+
+.ai-model-settings-modal .ant-modal-close {
+  color: var(--color-text-muted);
+}
+
+.ai-model-settings-modal .ant-modal-close:hover {
+  color: var(--color-text);
+}
+
+.ai-model-settings-modal .ant-modal-body {
+  background: var(--color-bg-panel);
+}
+
+.ai-model-settings-modal .ant-form-item-label > label {
+  color: var(--color-text);
+}
+
+.ai-model-settings-modal .ant-input,
+.ai-model-settings-modal .ant-input-number {
+  background: var(--color-bg-base) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text) !important;
+}
+
+.ai-model-settings-modal .ant-input::placeholder {
+  color: var(--color-text-dim) !important;
+}
+
+.ai-model-settings-modal .ant-input-number-input {
+  color: var(--color-text) !important;
+}
+
+.ai-model-settings-modal .ai-settings-section + .ai-settings-section {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.ai-settings-title {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.ai-settings-desc {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.ai-settings-desc code {
+  font-size: 11px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-base);
+  color: var(--color-text);
+}

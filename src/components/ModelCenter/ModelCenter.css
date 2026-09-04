@@ -1,0 +1,38 @@
+.model-center-modal .ant-modal-body {
+  padding-top: 16px;
+}
+
+.model-center {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 480px;
+}
+
+.model-center-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  /* 避开 Modal 右上角关闭按钮，减少误触 */
+  padding-right: 48px;
+}
+
+.model-center-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.model-center-grid {
+  max-height: 62vh;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.model-center-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+}

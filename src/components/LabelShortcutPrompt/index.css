@@ -1,0 +1,171 @@
+.label-shortcut-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 90;
+  pointer-events: auto;
+}
+
+.label-shortcut-prompt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  min-width: 220px;
+  max-width: 320px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--color-bg-base) 55%, transparent);
+  pointer-events: auto;
+}
+
+.label-shortcut-prompt:focus {
+  outline: none;
+}
+
+.label-shortcut-title {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.label-shortcut-meta {
+  margin: 0 0 12px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.label-shortcut-group-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+}
+
+.label-shortcut-group-label {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.label-shortcut-group-input {
+  flex: 1;
+  min-width: 0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-base);
+  color: var(--color-text);
+  font-size: 13px;
+}
+
+.label-shortcut-group-input::placeholder {
+  color: var(--color-text-dim);
+}
+
+.label-shortcut-group-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.label-shortcut-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label-shortcut-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-text);
+  transition: background 0.15s;
+}
+
+.label-shortcut-item:hover {
+  background: var(--color-bg-hover);
+}
+
+.label-shortcut-key {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--color-text) 10%, transparent);
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.label-shortcut-name {
+  flex: 1;
+  min-width: 0;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.label-shortcut-empty {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.label-shortcut-hint {
+  margin: 12px 0 0;
+  font-size: 11px;
+  color: var(--color-text-dim);
+  text-align: center;
+}
+
+.label-shortcut-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.label-shortcut-cancel-btn,
+.label-shortcut-open-modal {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 0;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.label-shortcut-cancel-btn {
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-base);
+  color: var(--color-text);
+}
+
+.label-shortcut-cancel-btn:hover {
+  background: var(--color-bg-hover);
+}
+
+.label-shortcut-open-modal {
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+}
+
+.label-shortcut-open-modal:hover {
+  text-decoration: underline;
+}

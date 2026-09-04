@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "flags": {},
+  "imagePath": "demo.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920,
+  "shapes": [
+    {
+      "label": "person",
+      "score": null,
+      "points": [
+        [120, 80],
+        [420, 80],
+        [420, 520],
+        [120, 520]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "car",
+      "score": null,
+      "points": [
+        [600, 400],
+        [900, 380],
+        [920, 550],
+        [580, 570]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": false,
+      "shape_type": "polygon",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "ship",
+      "score": null,
+      "points": [
+        [1000, 200],
+        [1300, 180],
+        [1280, 320],
+        [1020, 340]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": false,
+      "shape_type": "rotation",
+      "flags": {},
+      "attributes": {}
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+/* 上传 / 导出弹窗 */
+.yolo-transfer-modal .ant-modal-content {
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.yolo-transfer-modal .ant-modal-header {
+  background: var(--color-bg-panel);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.yolo-transfer-modal .ant-modal-title {
+  color: var(--color-text);
+}
+
+.yolo-transfer-modal .ant-modal-close {
+  color: var(--color-text-muted);
+}
+
+.yolo-transfer-modal .ant-modal-close:hover {
+  color: var(--color-text);
+}
+
+.yolo-transfer-modal .ant-modal-body {
+  background: var(--color-bg-panel);
+}
+
+.transfer-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.transfer-step-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.transfer-step-desc {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+}
+
+.transfer-step-status {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--color-success);
+}
+
+.yolo-transfer-modal .transfer-step .ant-btn {
+  height: 36px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.yolo-transfer-modal .transfer-step .ant-btn-default {
+  background: var(--color-bg-hover) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text) !important;
+}
+
+.yolo-transfer-modal .transfer-step .ant-btn-default:hover:not(:disabled) {
+  background: var(--color-border) !important;
+  border-color: var(--color-text-dim) !important;
+  color: var(--color-text) !important;
+}
+
+.yolo-transfer-modal .transfer-step .ant-btn-primary {
+  background: var(--color-primary-strong) !important;
+  border-color: var(--color-primary-strong) !important;
+  color: #fff !important;
+}
+
+.yolo-transfer-modal .transfer-step .ant-btn-primary:hover:not(:disabled) {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #fff !important;
+}
+
+.yolo-transfer-modal .transfer-step .ant-btn:disabled {
+  opacity: 0.45;
+}
+
+.yolo-transfer-modal .transfer-step .ant-btn .anticon {
+  color: inherit;
+}
+
+.transfer-sample-download {
+  margin-top: 4px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--color-border);
+}
+
+.transfer-sample-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-primary);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.transfer-sample-link:hover {
+  color: var(--color-primary-strong);
+  text-decoration: underline;
+}

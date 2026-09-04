@@ -1,0 +1,57 @@
+{
+  "imagePath": "demo.jpg",
+  "labels": [
+    {
+      "id": "label-person",
+      "name": "person",
+      "color": "#58a6ff"
+    },
+    {
+      "id": "label-car",
+      "name": "car",
+      "color": "#3fb950"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "ann-rect-1",
+      "labelId": "label-person",
+      "labelName": "person",
+      "shapeType": "rectangle",
+      "x": 120,
+      "y": 80,
+      "width": 300,
+      "height": 440
+    },
+    {
+      "id": "ann-poly-1",
+      "labelId": "label-car",
+      "labelName": "car",
+      "shapeType": "polygon",
+      "x": 580,
+      "y": 380,
+      "width": 340,
+      "height": 190,
+      "points": [600, 400, 900, 380, 920, 550, 580, 570]
+    },
+    {
+      "id": "ann-obb-1",
+      "labelName": "car",
+      "shapeType": "rotated-rectangle",
+      "x": 1100,
+      "y": 250,
+      "width": 280,
+      "height": 120,
+      "angle": 0.35
+    },
+    {
+      "id": "ann-point-1",
+      "labelName": "person",
+      "shapeType": "point",
+      "x": 280,
+      "y": 150,
+      "width": 0,
+      "height": 0
+    }
+  ]
+}

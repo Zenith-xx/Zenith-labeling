@@ -1,0 +1,37 @@
+/* 深色（默认） */
+:root,
+[data-theme='dark'] {
+  --color-primary: #58a6ff;
+  --color-primary-strong: #1f6feb;
+  --color-bg-base: #0d1117;
+  --color-bg-panel: #161b22;
+  --color-bg-elevated: #1c2128;
+  --color-bg-hover: #21262d;
+  --color-border: #30363d;
+  --color-text: #c9d1d9;
+  --color-text-muted: #8b949e;
+  --color-text-dim: #484f58;
+  --color-success: #3fb950;
+  --color-danger: #f85149;
+  --color-selection: #1f6feb;
+  --color-selection-text: #ffffff;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+/* 浅色 */
+[data-theme='light'] {
+  --color-primary: #0969da;
+  --color-primary-strong: #0550ae;
+  --color-bg-base: #ffffff;
+  --color-bg-panel: #f6f8fa;
+  --color-bg-elevated: #ffffff;
+  --color-bg-hover: #f3f4f6;
+  --color-border: #d0d7de;
+  --color-text: #1f2328;
+  --color-text-muted: #656d76;
+  --color-text-dim: #8c959f;
+  --color-success: #1a7f37;
+  --color-danger: #cf222e;
+  --color-selection: #0969da;
+  --color-selection-text: #ffffff;
+}

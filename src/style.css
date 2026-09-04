@@ -1,0 +1,176 @@
+@import './styles/variables.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  background: var(--color-bg-base);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@supports (height: 100dvh) {
+  html:not(.is-embedded),
+  html:not(.is-embedded) body,
+  html:not(.is-embedded) #app {
+    height: 100dvh;
+    max-height: 100dvh;
+  }
+}
+
+html.is-embedded,
+html.is-embedded body,
+html.is-embedded #app,
+html.is-embedded #app > *,
+html.is-embedded .app-root,
+html.is-embedded .app-root > div {
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-dim);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-primary-strong) 25%, transparent);
+}
+
+.panel-header {
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ant-btn {
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.ant-btn svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.ant-message-notice-content {
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.panel-checkbox.ant-checkbox-wrapper .ant-checkbox-inner {
+  background-color: var(--color-bg-hover);
+  border-color: var(--color-text-dim);
+}
+
+.panel-checkbox.ant-checkbox-wrapper:hover .ant-checkbox-inner {
+  border-color: var(--color-primary);
+}
+
+.panel-checkbox.ant-checkbox-wrapper .ant-checkbox-checked .ant-checkbox-inner,
+.panel-checkbox.ant-checkbox-wrapper .ant-checkbox-checked:hover .ant-checkbox-inner {
+  background-color: var(--color-primary-strong);
+  border-color: var(--color-primary-strong);
+}
+
+.panel-checkbox.ant-checkbox-wrapper .ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: #fff;
+}
+
+.panel-checkbox.ant-checkbox-wrapper-disabled.ant-checkbox-wrapper-checked {
+  opacity: 1;
+}
+
+.panel-checkbox.ant-checkbox-wrapper-disabled.ant-checkbox-wrapper-checked .ant-checkbox-inner,
+.panel-checkbox.ant-checkbox-wrapper-disabled.ant-checkbox-wrapper-checked:hover .ant-checkbox-inner {
+  background-color: var(--color-primary-strong);
+  border-color: var(--color-primary-strong);
+}
+
+.panel-checkbox.ant-checkbox-wrapper-disabled.ant-checkbox-wrapper-checked .ant-checkbox-inner::after {
+  border-color: #fff;
+}
+
+.panel-list-item--selected,
+.panel-list-item.panel-list-item--selected {
+  background: var(--color-selection) !important;
+  color: var(--color-selection-text) !important;
+}
+
+.panel-list-item--selected .panel-list-item-label,
+.panel-list-item.panel-list-item--selected .panel-list-item-label {
+  color: var(--color-selection-text) !important;
+}
+
+/* 对象 / 文件列表选中：蓝底白字（与 labeling1 一致） */
+.object-item.panel-select-item.active,
+.file-item.panel-select-item.active {
+  background: var(--color-selection);
+  color: var(--color-selection-text);
+}
+
+.panel-select-item.active .panel-checkbox.ant-checkbox-wrapper .ant-checkbox-checked .ant-checkbox-inner,
+.panel-select-item.active .panel-checkbox.ant-checkbox-wrapper .ant-checkbox-checked:hover .ant-checkbox-inner,
+.panel-select-item.active .panel-checkbox.ant-checkbox-wrapper-disabled.ant-checkbox-wrapper-checked .ant-checkbox-inner,
+.panel-select-item.active .panel-checkbox.ant-checkbox-wrapper-disabled.ant-checkbox-wrapper-checked:hover .ant-checkbox-inner {
+  background-color: var(--color-primary-strong) !important;
+  border-color: var(--color-primary-strong) !important;
+}
+
+.panel-select-item.active .panel-checkbox.ant-checkbox-wrapper .ant-checkbox-checked .ant-checkbox-inner::after,
+.panel-select-item.active .panel-checkbox.ant-checkbox-wrapper-disabled.ant-checkbox-wrapper-checked .ant-checkbox-inner::after {
+  border-color: #fff !important;
+}
+
+.panel-select-item.active .panel-checkbox.ant-checkbox-wrapper:not(.ant-checkbox-wrapper-checked) .ant-checkbox-inner {
+  background-color: color-mix(in srgb, var(--color-selection-text) 18%, transparent);
+  border-color: color-mix(in srgb, var(--color-selection-text) 45%, transparent);
+}
+
+.file-item.panel-select-item.active .panel-checkbox.ant-checkbox-wrapper:not(.ant-checkbox-wrapper-checked) .ant-checkbox-inner {
+  background-color: color-mix(in srgb, var(--color-selection-text) 18%, transparent);
+  border-color: color-mix(in srgb, var(--color-selection-text) 45%, transparent);
+}

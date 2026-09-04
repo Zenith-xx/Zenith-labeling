@@ -1,0 +1,29 @@
+.model-test {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.model-test-error {
+  display: block;
+}
+
+.model-test-result {
+  width: 100%;
+}
+
+.model-test-canvas-wrap {
+  min-height: 180px;
+  border: 1px dashed var(--color-border, #d9d9d9);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 8px;
+}
+
+.model-test-canvas {
+  max-width: 100%;
+  height: auto;
+}

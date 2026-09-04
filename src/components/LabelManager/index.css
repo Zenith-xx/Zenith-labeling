@@ -1,0 +1,94 @@
+.label-manager {
+  min-height: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.label-manager .panel-header {
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label-manager-settings-btn {
+  color: var(--color-text-muted) !important;
+  font-size: 14px;
+}
+
+.label-manager-settings-btn:hover {
+  color: var(--color-primary) !important;
+}
+
+.label-manager-list {
+  flex: 1;
+  min-height: 0;
+}
+
+.label-manager-empty {
+  padding: 16px;
+  text-align: center;
+  color: var(--color-text-dim);
+  font-size: 12px;
+}
+
+.label-manager-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
+  transition: filter 0.15s ease;
+}
+
+.label-manager-item:hover {
+  filter: brightness(1.08);
+}
+
+.label-manager-name {
+  font-size: 13px;
+  flex: 1;
+  color: #1f2328;
+}
+
+.label-manager-count {
+  margin-left: 4px;
+  font-size: 12px;
+  color: rgba(31, 35, 40, 0.75);
+}
+
+.label-manager-actions {
+  display: flex;
+  gap: 2px;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.label-manager-item:hover .label-manager-actions {
+  opacity: 1;
+}
+
+.label-manager-action-btn {
+  background: rgba(0, 0, 0, 0.12);
+  border: none;
+  color: rgba(31, 35, 40, 0.7);
+  cursor: pointer;
+  padding: 2px 4px;
+  font-size: 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.label-manager-action-btn:hover {
+  color: #1f2328;
+  background: rgba(0, 0, 0, 0.2);
+}

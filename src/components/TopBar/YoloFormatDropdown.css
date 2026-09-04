@@ -1,0 +1,104 @@
+.yolo-format-dropdown {
+  position: relative;
+}
+
+.yolo-format-trigger {
+  display: inline-flex;
+}
+
+.yolo-format-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 160px;
+  padding: 4px;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--color-bg-base) 55%, transparent);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px) scale(0.98);
+  transform-origin: top left;
+  pointer-events: none;
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s ease;
+}
+
+.yolo-format-dropdown.is-open .yolo-format-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* 桥接按钮与菜单之间的空隙，避免移入菜单时误关 */
+.yolo-format-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  height: 6px;
+}
+
+.yolo-format-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease;
+}
+
+.yolo-format-item:hover:not(.disabled) {
+  background: var(--color-bg-hover);
+}
+
+.yolo-format-item:focus,
+.yolo-format-item:focus-visible {
+  outline: none;
+}
+
+.yolo-format-item.disabled {
+  color: var(--color-text-dim);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.yolo-format-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-primary-strong);
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.yolo-format-item.disabled .yolo-format-icon {
+  background: var(--color-text-dim);
+  color: var(--color-text-muted);
+}
+
+.yolo-format-label {
+  white-space: nowrap;
+}
+
+.yolo-format-divider {
+  height: 1px;
+  margin: 4px 8px;
+  background: var(--color-border);
+}

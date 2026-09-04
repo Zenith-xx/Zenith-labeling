@@ -1,0 +1,110 @@
+.ai-task-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.ai-task-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ai-task-field-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.ai-task-params-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 12px;
+  width: 100%;
+}
+
+.ai-task-param-input {
+  width: 100%;
+}
+
+.ai-task-param-input.ant-input-number {
+  width: 100%;
+}
+
+.ai-task-scope-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.ai-task-scope-group .ant-radio-wrapper {
+  margin-inline-end: 0;
+  white-space: nowrap;
+  line-height: 1.5;
+}
+
+.ai-task-scope-hint {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.ai-task-range-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.ai-task-range-label {
+  font-size: 13px;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.ai-task-range-input {
+  width: 96px;
+  min-height: 32px;
+}
+
+.ai-task-range-input.ant-input-number {
+  width: 96px;
+  min-height: 32px;
+}
+
+.ai-task-range-input.ant-input-number .ant-input-number-input {
+  height: 30px;
+  font-size: 14px;
+  padding: 4px 8px;
+}
+
+.ai-task-range-total {
+  font-size: 12px;
+}
+
+.ai-task-checkbox-row {
+  width: 100%;
+}
+
+.ai-task-label {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+  white-space: normal;
+  word-break: keep-all;
+}
+
+.ai-task-model-select {
+  width: 100%;
+}
+
+.ai-task-snapshot-hint {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  word-break: break-word;
+}

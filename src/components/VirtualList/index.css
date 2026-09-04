@@ -1,0 +1,49 @@
+.virtual-list {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.virtual-list--horizontal-scroll {
+  overflow-x: auto;
+}
+
+.virtual-list--horizontal-scroll .virtual-list-inner {
+  width: max-content;
+  min-width: 100%;
+}
+
+.virtual-list--horizontal-scroll .virtual-list-window {
+  width: max-content;
+  min-width: 100%;
+}
+
+.virtual-list--horizontal-scroll .virtual-list-item {
+  width: max-content;
+  min-width: 100%;
+}
+
+.virtual-list--fixed-horizontal-width .virtual-list-inner,
+.virtual-list--fixed-horizontal-width .virtual-list-window,
+.virtual-list--fixed-horizontal-width .virtual-list-item {
+  width: var(--virtual-list-content-width);
+  min-width: 100%;
+  max-width: none;
+}
+
+.virtual-list-inner {
+  position: relative;
+  width: 100%;
+}
+
+.virtual-list-window {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  will-change: transform;
+}
+
+.virtual-list-item {
+  box-sizing: border-box;
+}
